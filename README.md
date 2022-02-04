@@ -40,3 +40,10 @@ Statistics
 Plugin to Slack
 Business with Ironhack
 Add option for handling private repositories
+Link to Git pages if there is any
+
+## Personas
+Students
+Ironhacker student learning full stack web development.
+
+As a ironhacker student I want to be able to share with and follow my fellow ironhacker students' git repositories and statistics so that I can compare code, get inspiration.
