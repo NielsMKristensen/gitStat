@@ -6,7 +6,12 @@ config is configuration object:
     repo: 'Repository name',
     code: 'A number representing the required stats, see below'
 }
-
+Simplified:
+0 No config
+1 Commit statistics
+2 Page views
+4 Clones and referrals
+Full:
 0 No config
 1 weekly commit activity
 2 weekly commit count
