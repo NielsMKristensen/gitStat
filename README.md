@@ -1,3 +1,6 @@
+#Notes to discuss
+Add anything here so that we don!t forget and can discuss
+
 # gitStat
 Register and fetch statistics about student Git repositories
 
