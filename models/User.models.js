@@ -8,7 +8,6 @@ const userSchema = new Schema({
     },
     password: {
         String,
-        required: [true, 'Password is required']
     },
     gitUsernames: [{
         type: String,
