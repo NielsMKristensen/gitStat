@@ -1,5 +1,5 @@
-<div id="form">
-  <h2>login</h2>
+<div>
+  <h2>Register</h2>
   <form action="/register" method="POST">
 
     <label> Username
@@ -11,10 +11,15 @@
     </label>
 
     <label> GITUsernames
-      <input type="text" name="gitusernames" placeholder="GITusername" />
+      <input type="text" name="gitusernames" placeholder="<GIT usernames>" />
     </label>
 
     <button type="submit">Register</button>
 
-  
+    {{!-- error message will be added here --}}
+      {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+      {{/if}}
+
+  </form>
 </div>
