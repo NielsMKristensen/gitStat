@@ -26,8 +26,3 @@ Fetch the path based on the config
      arrayOfPath.push();
    }
  }
-
- 7 =>
- 3 
- 2
- 1
