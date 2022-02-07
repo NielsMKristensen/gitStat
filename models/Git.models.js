@@ -35,3 +35,8 @@ const gitSchema = new Schema({
 const Git = model("Git", gitSchema);
 
 module.exports = Git;
+
+
+ujjtamas,gitstat,'2
+ujjtamas,darts,3
+ujjtamas,lab1,''

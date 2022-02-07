@@ -9,8 +9,7 @@ const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 router.get('/register', /*isLoggedOut*/ (req,res,next) => res.render('register.hbs'));
 
 //POST registration with info from registration page.
-router.post('/register', (req, res, next) => {
-    console.log('console stuff here',req.body)
+router.post('/register', (req, res,next ) => {
     
     const { username, password, gitusernames } = req.body;
 
@@ -32,7 +31,7 @@ router.post('/register', (req, res, next) => {
     })
     .catch(error => {
       next(error);
-    }) 
+    })
 });
 
 

@@ -15,6 +15,11 @@ const hbs = require('hbs');
 const express = require("express");
 const app = express();
 
+// 1. require the body-parser
+const bodyParser = require('body-parser');
+// 2. let know your app you will be using it
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // 👇 Start handling routes here
 
 //login route
