@@ -25,4 +25,8 @@ app.use("/", login);
 const register = require("./routes/register.routes");
 app.use("/", register);
 
+//Main route
+const home = require("./routes/home.routes");
+app.use("/", home);
+
 module.exports = app;

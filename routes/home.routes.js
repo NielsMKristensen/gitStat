@@ -5,7 +5,7 @@ const saltRounds = 10;
 const User = require('../models/User.models');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 
-//get registration page. (not in our wirefraime description lets add)
-router.get('/register', /*isLoggedOut*/ (req,res,next) => res.render('register.hbs'));
+//get login page. (should be start page. page home in our nice picture)
+router.get('/home', isLoggedIn, (req,res,next) => res.render('home.hbs'));
 
 module.exports = router;
