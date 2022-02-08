@@ -8,3 +8,7 @@ const codePathMap = {
 2:['/traffic/views'],
 4:['/traffic/clones','/traffic/popular/paths','/traffic/popular/referrers']
 }
+
+const gitAPIPath = 'https://api.github.com/repos';
+ module.exports = {codePathMap, gitAPIPath};
+//  module.exports = codePathMap;
