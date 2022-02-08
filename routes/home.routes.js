@@ -8,4 +8,6 @@ const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 //get login page. (should be start page. page home in our nice picture)
 router.get('/home', isLoggedIn, (req,res,next) => res.render('home.hbs'));
 
+router.get('/profile', isLoggedIn, (req,res,next) => res.render('profile.hbs'));
+
 module.exports = router;
