@@ -6,7 +6,7 @@ const User = require('../models/User.models');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 
 //GET registration page. (not in our wirefraime description lets add)
-router.get('/register', /*isLoggedOut*/ (req,res,next) => res.render('register.hbs'));
+router.get('/register', isLoggedOut, (req,res,next) => res.render('register.hbs'));
 
 //POST registration with info from registration page.
 router.post('/register', (req, res,next ) => {
