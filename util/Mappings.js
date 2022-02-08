@@ -9,6 +9,7 @@ const codePathMap = {
 4:['/traffic/clones','/traffic/popular/paths','/traffic/popular/referrers']
 }
 
-const gitAPIPath = 'https://api.github.com/repos';
- module.exports = {codePathMap, gitAPIPath};
+const gitAPIPathRepos = 'https://api.github.com/repos';
+const gitAPIPathUsers = 'https://api.github.com/users';
+ module.exports = {codePathMap, gitAPIPathRepos,gitAPIPathUsers};
 //  module.exports = codePathMap;

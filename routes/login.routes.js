@@ -31,7 +31,7 @@ router.post('/login', isLoggedOut,(req, res, next) => {
             req.session.currentUser = user;
             res.redirect('/home')
          }else {
-             res.render('login', { errorMessage: 'Incorrect password.' });
+            res.render('login', { errorMessage: 'Incorrect password.' });
          }
      })
      .catch(error => next(error));

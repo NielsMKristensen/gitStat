@@ -5,6 +5,9 @@ require("dotenv/config");
 // ℹ️ Connects to the database
 require("./db");
 
+// Fetch
+// const fetch = require('node-fetch');
+
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 const express = require("express");
@@ -38,6 +41,10 @@ app.use("/", login);
 //register route
 const register = require("./routes/register.routes");
 app.use("/", register);
+
+//my repos
+const myRepos = require("./routes/my.repos.routes");
+app.use("/",myRepos);
 
 //Main route
 const home = require("./routes/home.routes");

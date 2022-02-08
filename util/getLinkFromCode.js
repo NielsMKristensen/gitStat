@@ -1,7 +1,7 @@
 const { constants } = require('buffer');
 const maps = require('../util/Mappings');
 const map = maps.codePathMap;
-const baseURL = maps.gitAPIPath;
+const baseURL = maps.gitAPIPathRepos;
 
 //Decode the code to know what config has been requested
 function decodeCode(x,arr){
@@ -34,7 +34,7 @@ return decodeCode(x,arr2);
   }
 
   //construct the full link username REPOname needed
-function getFullPath(x){
+function getFullPath(x,gitUserName){
   let pathArray = getPath(x);
   let fullPathArray = [];
   if(pathArray.length ==0) return 'No path to return';
@@ -43,7 +43,9 @@ function getFullPath(x){
     fullPathArray.push(baseURL + pathArray[i]);
   }
 
-  console.log(fullPathArray)
+  console.log(fullPathArray);
 }
- 
-getFullPath(3)
+
+
+
+module.exports = getFullPath();
