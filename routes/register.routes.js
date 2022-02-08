@@ -12,11 +12,23 @@ router.get('/register', /*isLoggedOut*/ (req,res,next) => res.render('register.h
 router.post('/register', (req, res,next ) => {
     
   const { username, password, gitusernames } = req.body;
+  
   console.log(username + ' ' +  password + ' ' +   gitusernames);
+    
     if (!username || !password || !gitusernames) {
-      res.render('/register', {errorMessage: 'All fields needs to be filled out, please provide username, password and GIT username'})  
+      res.render('register', {errorMessage: 'All fields needs to be filled out, please provide username, password and GIT username'})
+      return
     }
-    bcryptjs
+
+    const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    if (!regex.test(password)) {
+      res
+        .status(500)
+        .render('register', { errorMessage: 'Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.' });
+     return;
+  }
+
+  bcryptjs
       .genSalt(saltRounds)
       .then(salt => bcryptjs.hash(password, salt))
       .then(hashedPassword => {
@@ -43,8 +55,12 @@ router.post('/register', (req, res,next ) => {
         res.redirect('/home');
     })
     .catch(error => {
-      next(error);
-    })
+        if (error.code === 11000) {
+            res.status(500).render('register', {errorMessage: 'user already exists please choose another username'});
+        } else { 
+        next(error);
+        }
+    });
 });
 
 
