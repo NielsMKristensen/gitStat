@@ -69,3 +69,5 @@ Referral paths
     /repos/{owner}/{repo}/traffic/clones
 Referral sources
     /repos/{owner}/{repo}/traffic/popular/referrers
+
+  https://api.github.com/repos/ujjtamas/gitStat/stats/code_frequency

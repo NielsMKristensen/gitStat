@@ -5,9 +5,6 @@ require("dotenv/config");
 // ℹ️ Connects to the database
 require("./db");
 
-// Fetch
-// const fetch = require('node-fetch');
-
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
 const express = require("express");
@@ -16,7 +13,13 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+
 const app = express();
+// const path = require('path');
+
+// hbs.registerPartials(__dirname + '/views/partials');
+// app.set('view engine', 'hbs');
+// app.set('views',path.join(__dirname, 'views'))
 
 //require session config
 require('./config/session.config')(app);

@@ -6,25 +6,73 @@ const User = require('../models/User.models');
 const Git = require('../models/Git.models');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 // const { route } = require("../app.js");
-// const getFullPath = require('../util/getLinkFromCode');
+const getFullPath = require('../util/getLinkFromCode');
 
 const getRepos = require('../util/getLinkToRepos');
 const getRepoWithCode = require('../util/getCode');
+// const getNameFromConfig = require('../util/getNameFromConfig');
 
 //Fetching all the repositories for the logged in user
 router.post('/profile', isLoggedIn,(req,res,next) => {
     const gitusernames = req.session.currentUser.gitusernames;
     const userId = req.session.currentUser._id;
-    let repoWithCode = getRepoWithCode(req.body);
+    
+    let gitDetailsArray = [];
 
-    Git.findOne({username:userId})
-        .then(user => {
-            console.log('user: ' + user);
-            user.config = repoWithCode;
-            user.save();
-        })
-        .then(() =>  res.redirect('/home'))
-        .catch(err => console.log('Error during update updating git configuration' + err));
-});
+    let repoWithCode = getRepoWithCode(req.body);
+    console.log(repoWithCode);
+    updateGit();
+    
+    async function updateGit(){
+        const arr = await getReposFunction();
+        
+        Git.findOne({username:userId, a: arr})
+            .then(user => {
+                user.config = repoWithCode;
+                user.gitDetails = arr;
+                user.save();
+                return user;
+            });
+        }
+
+        async function getReposFunction(){
+        let p = await getRepos(gitusernames).then (data => {
+            for(i in data){
+                for(j in repoWithCode){
+                    if(data[i].name == j){
+                        let gitDetailsObj = {};
+                        gitDetailsObj.title = j;
+                        gitDetailsObj.description = data[i].description
+                        gitDetailsObj.linkToRepo = data[i].html_url;
+                        gitDetailsObj.linkToStats = [...getFullPath(repoWithCode[j],gitusernames)];
+                        gitDetailsArray.push(gitDetailsObj);
+                    }
+                }
+            }
+            return(gitDetailsArray);
+            });
+            return p;
+        }
+    res.redirect('/home');
+})
+
 
 module.exports = router;
+
+/* [{
+only for configured ones
+    title : 'gitstat'
+    description : 'dfdfdffd'
+    linkto Git repository : 'link'
+    link to stat: [https,]
+    }
+  {
+
+    title : 'day1'
+    description : 'dfdfdffd'
+    linkto Git repository : 'link'
+    link to stat: [https,]
+    }
+    
+}]
+*/

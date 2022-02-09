@@ -34,7 +34,28 @@ const gitSchema = new Schema({
     },
     config: {
         type:Object
+    },
+    gitDetails: [{
+        type:Object
+    }],
+/* [{
+only for configured ones
+    title : 'gitstat'
+    description : 'dfdfdffd'
+    linkto Git repository : 'link'
+    link to stat: [https,]
     }
+  {
+
+    title : 'day1'
+    description : 'dfdfdffd'
+    linkto Git repository : 'link'
+    link to stat: [https,]
+    }
+    
+}]
+*/
+
 });
 
 const Git = model("Git", gitSchema);

@@ -11,8 +11,29 @@ const getRepos = require('../util/getLinkToRepos');
 const getConfig = require('../util/getNameFromCode');
 
 //get login page. (should be start page. page home in our nice picture)
-router.get('/home', isLoggedIn, (req,res,next) => res.render('home.hbs'));
+router.get('/home', isLoggedIn, (req,res,next) => {
+    //fetch configuration from datase
+    // crate the API links    
+    const gitusernames = req.session.currentUser.gitusernames;
+    const userId = req.session.currentUser._id;
 
+    something();
+    async function something(){
+        let data = await getGit();
+        
+        res.render('home.hbs',{data: data});
+    }
+
+    async function getGit(){
+        let p = Git.findOne({username:userId})
+            .then(user => {
+                return user.gitDetails;
+            });
+            return p;
+        }
+});
+
+//Get available configuration from the database
 router.get('/profile', isLoggedIn, (req,res,next) => {
     const gitusernames = req.session.currentUser.gitusernames;
     const userId = req.session.currentUser._id;
