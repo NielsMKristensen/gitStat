@@ -8,20 +8,47 @@ const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 const { rawListeners } = require("../models/User.models");
 const getCode = require('../util/getCode');
 const getRepos = require('../util/getLinkToRepos');
+const getConfig = require('../util/getNameFromCode');
 
 //get login page. (should be start page. page home in our nice picture)
 router.get('/home', isLoggedIn, (req,res,next) => res.render('home.hbs'));
 
 router.get('/profile', isLoggedIn, (req,res,next) => {
     const gitusernames = req.session.currentUser.gitusernames;
-
+    const userId = req.session.currentUser._id;
+    let availableConfig = {};
+    let config = {};
     for (i in gitusernames){
     getRepos(gitusernames[i])
         .then( data => {
+            Git.findOne({username: userId})
+                .then((user) => {
+                    // console.log('got the user ' + user);
+                    availableConfig = user.config;
+                    // console.log('got the config ' + JSON.stringify(availableConfig));
+                    config = getConfig(availableConfig);
+                    //add config to data
+                    for(i in data){
+                        for(j in config){
+                            // parse text 
+                            if(data[i].name == j){
+                                let a = config[j].split('_');
+                                for(x = 0; x<a.length;x++){
+                                    a[x] += '_';
+                                }
+                                a.pop();
+                                for(x = 0; x<a.length;x++){
+                                    data[i][a[x]] = 'checked'; 
+                                }
+                                
+                            }
+                        }
+                    }
+            });
             res.render('profile', {data: data});
     });
    }
-    // res.render('profile.hbs')
+   
 });
 
 router.post('/home',isLoggedIn, (req,res,next) => {

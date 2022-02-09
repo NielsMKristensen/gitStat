@@ -1,3 +1,7 @@
+// let cb = documents.getElementsByClassName('repoCheckbox');
+
+// console.log(cb.length);
+
 document.addEventListener(
   "DOMContentLoaded",
   () => {
@@ -5,3 +9,4 @@ document.addEventListener(
   },
   false
 );
+
