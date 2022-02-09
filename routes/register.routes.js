@@ -64,4 +64,18 @@ router.post('/register', (req, res,next ) => {
 });
 
 
+
+router.post('/unregister', (req,res,next) => {
+   
+  const user = req.session.currentUser;
+  console.log('user', user._id)
+   
+  User.findByIdAndRemove(user._id)
+      .then(() => res.redirect("login"))
+      .catch((err) => next(err));
+  });
+
+
+
 module.exports = router;
+
