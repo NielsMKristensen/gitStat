@@ -34,12 +34,16 @@
     <h3>Change GIT username</h3>
     <form action="/changegitusername" method="POST">
 
-    <label> New GIT Username
-      <input type="text" name="newgitusername" placeholder="{{}}" />
-    </label>
-
+                {{#each data}}
+                {{#if @first}}
+                <label> New GIT Username
+                    <input type="text" name="newgitusername" placeholder="{{this.owner.login}}"/>
+                </label>
+                {{/if}}
+                {{/each}}
     <button type="submit">Change</button>
-        
+    </form>
+
     
     
     
@@ -74,9 +78,6 @@
                     <span></span>
                 </div>
             {{/each}}
-                {{#each config}}
-                    {{@key}}: {{this}}
-                {{/each}}
                 <button type="submit" value="submit" class="btn btn-outline-primary me-2">Submit</button>
         </form>
     </div>
