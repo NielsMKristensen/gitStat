@@ -7,18 +7,29 @@ const Git = require('../models/Git.models');
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 const { rawListeners } = require("../models/User.models");
 const getCode = require('../util/getCode');
+const getRepos = require('../util/getLinkToRepos');
 
 //get login page. (should be start page. page home in our nice picture)
 router.get('/home', isLoggedIn, (req,res,next) => res.render('home.hbs'));
 
-router.get('/profile', isLoggedIn, (req,res,next) => res.render('profile.hbs'));
+router.get('/profile', isLoggedIn, (req,res,next) => {
+    const gitusernames = req.session.currentUser.gitusernames;
+
+    for (i in gitusernames){
+    getRepos(gitusernames[i])
+        .then( data => {
+            res.render('profile', {data: data});
+    });
+   }
+    // res.render('profile.hbs')
+});
 
 router.post('/home',isLoggedIn, (req,res,next) => {
     
     let obj = req.body;
     let userId = req.session.currentUser._id;
     getCode(obj);
-
+    
     for(key in obj){
         // console.log(key + ': ' + key.obj);
         //here we need to update the db based on the key

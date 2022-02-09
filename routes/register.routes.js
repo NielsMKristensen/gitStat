@@ -3,6 +3,8 @@ const router = new Router();
 const bcryptjs = require('bcryptjs');
 const saltRounds = 10;
 const User = require('../models/User.models');
+const Git = require('../models/Git.models');
+
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 
 //GET registration page. (not in our wirefraime description lets add)
@@ -46,7 +48,11 @@ router.post('/register', (req, res,next ) => {
           .then(newUserToUpdate => {
             newUserToUpdate.gitusernames.push(gitusernames);
             newUserToUpdate
-            .save()
+            .save();
+            Git.create({
+              username: newUser._id,
+              gitusernames: {}
+            });
           })
           
           .catch(err => console.log('Error while pushing git username ' + err));

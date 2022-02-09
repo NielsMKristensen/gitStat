@@ -48,11 +48,11 @@
     <h3>manage repositories</h3>
 
     <div>
-        <form action="/home" method="POST" id="repoListForm">
+        <form action="/profile" method="POST" id="repoListForm">
             {{#each data}}
                 <div class="repoList">
                     <label id="repoName">{{this.name}}</label>
-                    <label for="commitStat_{{this.id}}">Commit statistics
+                    <label for="commitStat_{{this.name}}">Commit statistics
                         <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" />
                     </label>
                 

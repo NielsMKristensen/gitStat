@@ -32,9 +32,9 @@ const gitSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    config: [{
+    config: {
         type:Object
-    }]
+    }
 });
 
 const Git = model("Git", gitSchema);

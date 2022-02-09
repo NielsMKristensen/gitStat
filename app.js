@@ -43,7 +43,7 @@ const register = require("./routes/register.routes");
 app.use("/", register);
 
 //my repos
-const myRepos = require("./routes/my.repos.routes");
+const myRepos = require("./routes/update.repos.routes");
 app.use("/",myRepos);
 
 //Main route
