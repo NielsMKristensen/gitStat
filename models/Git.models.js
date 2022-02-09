@@ -6,6 +6,11 @@ config is configuration object:
     repo: 'Repository name',
     code: 'A number representing the required stats, see below'
 }
+{
+    gitUser: ujjtamas,
+    repo: parse from frome name,
+    code: generate code
+}
 Simplified:
 0 No config
 1 Commit statistics
@@ -35,8 +40,3 @@ const gitSchema = new Schema({
 const Git = model("Git", gitSchema);
 
 module.exports = Git;
-
-
-ujjtamas,gitstat,'2
-ujjtamas,darts,3
-ujjtamas,lab1,''

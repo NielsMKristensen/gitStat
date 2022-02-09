@@ -46,6 +46,4 @@ function getFullPath(x,gitUserName){
   console.log(fullPathArray);
 }
 
-
-
 module.exports = getFullPath();

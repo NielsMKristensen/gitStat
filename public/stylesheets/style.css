@@ -12,3 +12,26 @@ h1 {
   
 }
 
+.repoList{
+  width: 70%;
+  display: grid;
+  gap: 0.25rem;
+  grid-auto-columns: 2fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  'one two three four';
+  border-bottom: 1px solid grey;
+}
+
+.repoList:nth-child(1){
+  grid-area: one;
+}
+.repoList:nth-child(2){
+  grid-area: two;
+}
+.repoList:nth-child(3){
+  grid-area: three;
+}
+.repoList:nth-child(4){
+  grid-area: four;
+}
+

@@ -8,4 +8,26 @@
 
 <h3>manage repositories</h3>
 
+<div>
+    <form action="/home" method="POST" id="repoListForm">
+        {{#each data}}
+            <div class="repoList">
+                <label id="repoName">{{this.name}}</label>
+                <label for="commitStat_{{this.id}}">Commit statistics
+                    <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" />
+                </label>
+                
+                <label for="pageViews_{{this.name}}">Page views
+                    <input type="checkbox" name="pageViews_{{this.name}}" id="pageViews_{{this.name}}" />
+                </label>
+                
+                <label for="clonesReferrals_{{this.name}}">Clones and referrals
+                    <input type="checkbox" name="clonesReferrals_{{this.name}}" id="clonesReferrals_{{this.name}}"/>
+                </label>
+                <span></span>
+            </div>
+        {{/each}}
+        <button type="submit" value="submit" class="btn">Submit</button>
+    </form>
+</div>
 

@@ -13,7 +13,7 @@ router.post('/register', (req, res,next ) => {
     
   const { username, password, gitusernames } = req.body;
   
-  console.log(username + ' ' +  password + ' ' +   gitusernames);
+  // console.log(username + ' ' +  password + ' ' +   gitusernames);
     
     if (!username || !password || !gitusernames) {
       res.render('register', {errorMessage: 'All fields needs to be filled out, please provide username, password and GIT username'})
