@@ -6,6 +6,7 @@ const User = require('../models/User.models');
 const Git = require('../models/Git.models');
 
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
+const { findOneAndUpdate } = require("../models/User.models");
 
 //GET registration page. (not in our wirefraime description lets add)
 router.get('/register', isLoggedOut, (req,res,next) => res.render('register.hbs'));
@@ -84,6 +85,24 @@ router.post('/unregister', (req,res,next) => {
       .then (() => req.session.destroy(err => {if (err) next(err); res.redirect('/'); }))
       .catch((err) => next(err));
 });
+
+
+router.post('/changegitusername', (req,res,next) => {
+  const user = req.session.currentUser;
+  const addNew = req.body.newgitusername
+  console.log('user', req.body)
+
+  User.findByIdAndUpdate(user._id)
+  .then(newUserToUpdate => {
+    
+    newUserToUpdate.gitusernames = addNew;
+    newUserToUpdate
+    .save();
+
+  })
+  .catch((err) => next(err));
+});
+
 
 module.exports = router;
 

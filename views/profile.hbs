@@ -16,23 +16,32 @@
         <li><a href="/about" class="nav-link px-2 link-dark">About</a></li>
       </ul>
 
+        <div class="col-md-3 text-end">
+            <form id="logout-form" action="/unregister" method="POST">
+                <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-outline-primary me-2">Unregister</button>
+            </form>
+      </div>
       <div class="col-md-3 text-end">
             <form id="logout-form" action="/logout" method="POST">
                 <button class="btn btn-outline-primary me-2">Logout</button>
             </form>
       </div>
-      
-      <div class="col-md-3 text-end">
-            <form id="logout-form" action="/unregister" method="POST">
-                <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-outline-primary me-2">Unregister</button>
-            </form>
-      </div>
-
     </header> 
     </div>
     
     <p>change password</p>
-    <p>change git username</p>
+    
+    <h3>Change GIT username</h3>
+    <form action="/changegitusername" method="POST">
+
+    <label> New GIT Username
+      <input type="text" name="newgitusername" placeholder="{{}}" />
+    </label>
+
+    <button type="submit">Change</button>
+        
+    
+    
     
     <h3>manage repositories</h3>
 
