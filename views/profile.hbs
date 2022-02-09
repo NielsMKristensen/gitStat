@@ -51,26 +51,38 @@
                 <div class="repoList">
                     <label id="repoName">{{this.name}}</label>
                     <label for="commitStat_{{this.name}}">Commit statistics
-                        <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" />
+                        
+                        <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" class="repoCheckbox" 
+                        {{#if this.commitStat_}}
+                            {{this.commitStat_}}
+                        {{/if}} />
                     </label>
                 
                     <label for="pageViews_{{this.name}}">Page views
-                        <input type="checkbox" name="pageViews_{{this.name}}" id="pageViews_{{this.name}}" />
+                        <input type="checkbox" name="pageViews_{{this.name}}" id="pageViews_{{this.name}}" class="repoCheckbox" 
+                        {{#if this.pageViews_}}
+                            {{this.pageViews_}}
+                        {{/if}} />
                     </label>
                 
                     <label for="clonesReferrals_{{this.name}}">Clones and referrals
-                        <input type="checkbox" name="clonesReferrals_{{this.name}}" id="clonesReferrals_{{this.name}}"/>
+                        <input type="checkbox" name="clonesReferrals_{{this.name}}" id="clonesReferrals_{{this.name}}" class="repoCheckbox" 
+                        {{#if this.clonesReferrals_}}
+                            {{this.clonesReferrals_}}
+                        {{/if}} />
                     </label>
                     <span></span>
                 </div>
             {{/each}}
+                {{#each config}}
+                    {{@key}}: {{this}}
+                {{/each}}
                 <button type="submit" value="submit" class="btn btn-outline-primary me-2">Submit</button>
         </form>
     </div>
 
-
-  
     <script src="/js/script.js"></script>
+    <script src="/js/fillRepoConfig.js"></script>
    </body>
 
 
