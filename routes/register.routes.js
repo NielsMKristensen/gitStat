@@ -72,19 +72,18 @@ router.post('/register', (req, res,next ) => {
 
 
 router.post('/unregister', (req,res,next) => {
-   
   const user = req.session.currentUser;
-  console.log('user', user._id)
-   
+    
+  Git.findOne({username:user._id}) 
+  .then(user => {
+    Git.findByIdAndRemove(user._id)
+    .catch((err) => next(err))
+  });
+  
   User.findByIdAndRemove(user._id)
       .then (() => req.session.destroy(err => {if (err) next(err); res.redirect('/'); }))
       .catch((err) => next(err));
-  });
-
-
-  
-
-
+});
 
 module.exports = router;
 
