@@ -20,7 +20,7 @@ router.get('/home', isLoggedIn, (req,res,next) => {
     something();
     async function something(){
         let data = await getGit();
-        
+        console.log(data);
         res.render('home.hbs',{data: data});
     }
 

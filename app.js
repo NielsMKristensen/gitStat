@@ -17,9 +17,9 @@ const hbs = require("hbs");
 const app = express();
 // const path = require('path');
 
-// hbs.registerPartials(__dirname + '/views/partials');
-// app.set('view engine', 'hbs');
-// app.set('views',path.join(__dirname, 'views'))
+hbs.registerPartials(__dirname + '/views/partials');
+app.set('view engine', 'hbs');
+app.set('views',__dirname + 'views');
 
 //require session config
 require('./config/session.config')(app);
