@@ -77,9 +77,12 @@ router.post('/unregister', (req,res,next) => {
   console.log('user', user._id)
    
   User.findByIdAndRemove(user._id)
-      .then(() => res.redirect("login"))
+      .then (() => req.session.destroy(err => {if (err) next(err); res.redirect('/'); }))
       .catch((err) => next(err));
   });
+
+
+  
 
 
 
