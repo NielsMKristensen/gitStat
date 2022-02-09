@@ -12,6 +12,9 @@
    </head>
 
    <body>
+     <div>
+          <h1>HOME</h1>
+    </div>
     <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -29,24 +32,10 @@
                 <button class="btn btn-outline-primary me-2">Logout</button>
             </form>
       </div>
-      
-      <div class="col-md-3 text-end">
-            <form id="logout-form" action="/unregister" method="POST">
-                <button class="btn btn-outline-primary me-2">Unregister</button>
-            </form>
-      </div>
-
     </header> 
     </div>
 
-   <div>
-        <form id="search-books">
-          <label for="search">Search:</label>
-          <input type="text" name="search" id="search">
-          <button name="search_btn">Search</button>
-        </form>
-      </div>
-   
+      
     <!-- {{#each repo}} 
         {{> repoTile this}} 
     {{/each}} -->
@@ -75,15 +64,3 @@
    </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
