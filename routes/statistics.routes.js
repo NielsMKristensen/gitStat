@@ -41,6 +41,11 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
                 obj.contributors = data;
             } 
 
+            if(arr[i].indexOf('participation') > -1){
+                //res.render('statistics',{data: data});
+                obj.participation = data;
+            } 
+
             /* arr[i] = one type fot he data then we call something
             call something and there we check the type */
             
@@ -48,7 +53,7 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
         }
         let e = {data: obj};
         console.log(e)
-        console.log(e.data.code_frequency);
+        console.log(e.data.participation);
         res.render('statistics', {data: obj});
     }
     
