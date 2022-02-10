@@ -25,13 +25,13 @@ router.post('/login', isLoggedOut,(req, res, next) => {
     User.findOne({username})
      .then(user => {
          if (!user) { 
-            res.redirect('/', { errorMessage: 'User Name is not registered. Try with other user Name.' })
+            res.render('login', { errorMessage: 'User Name is not registered. Try with other user Name.' })
              return;
          }else if (bcryptjs.compareSync(password, user.password)) {
             req.session.currentUser = user;
             res.redirect('/home')
          }else {
-            res.render('/login', { errorMessage: 'Incorrect password.' });
+            res.render('login', { errorMessage: 'Incorrect password.' });
          }
      })
      .catch(error => next(error));
