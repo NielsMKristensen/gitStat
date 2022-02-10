@@ -1,8 +1,8 @@
 # Project GIT Statistics
 
-GIT Stat project #2 Full-stack Web Application. 
+## GIT Stat project #2 Full-stack Web Application. 
 
-An application to share and access ironhack student's git repositories.
+An application to register and fetch statistics about student Git repositories
 
 ## Main User tory
 
@@ -10,68 +10,42 @@ As a ironhacker student
 I want to be able to share with and follow my fellow ironhacker students' git repositories and statistics
 So that I can compare code, get inspiration.
 
-### smaller user stories
+### user story
 
 As a user of the Git Stat application
 I want to be able to choose what i share with the other students.
 To ensure the quality of my work.
 
+#### Tasks
+- fetch git repositories and repository information via GIT API
+- add management of statistics to display
+- save information for future use.
+- push statistics and information to main page.
 
+### user story
 As a user of the Git Stat application
 I want my personal information to be protected from non git stat users.
-To prevent information theft.
+so that i can share with confidence.
+
+#### tasks
+- subscribe
+- authentication
+- login
+- manage user (git username)
+- unsubscribe
+
+### other tasks
+- Styling
+- trouble shooting :-)
+- deploy to hiroku
+- mongo cloud setup.
+# ADD MORE
 
 
-
-
-
-
-
-
-
-
-
-Wireframes
-User Stories
-Setup(Optional)
-Technologies Used
-Models
-Server routes table(Method, Route or URL, Description as columns)
-Demo(Optional) (Screenshots or GIFs of the application)
-Project Link
-Future Work
-Resources
-
-
-Team GITStat
-
-
-
-
-
-
-
-### Old stuff
-#Notes to discuss
-Add anything here so that we don!t forget and can discuss
-
-# gitStat
-Register and fetch statistics about student Git repositories
-
-## Features
-Register in database
-log in
-add your git username
-List all repos
-and select which repo to add to app 
-and select features/stats to display
-
-Others can access your selected repos and stats.
-
-Only work public repositories
+## Wire frames
+Insert pictures here
 
 ## Technologies
-
 •	Node.js
 •	Express.js
 •	MongoDB
@@ -86,12 +60,110 @@ Only work public repositories
 •	ironLauncher
 
 
+## Models
+
+## GIT information
+const {Schema, model, SchemaTypes} = require('mongoose');
+
+const gitSchema = new Schema({
+    username: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
+    config: {
+        type:Object
+    },
+    gitDetails: [{
+        type:Object
+    }],
+});
+
+const Git = model("Git", gitSchema);
+
+module.exports = Git;
+
+### User information
+const { Schema, model } = require("mongoose");
+
+
+const userSchema = new Schema(
+  {
+    username: {
+      type: String,
+  
+    },
+    password: String,
+  gitusernames: [{
+    type: String,
+  }],
+  
+  },
+  {
+  
+    timestamps: true,
+  }
+);
+
+const User = model("User", userSchema);
+
+module.exports = User;
+
+## Server routes
+
+Server routes table(Method, Route or URL, Description as columns)
+
+
+
+
+
+## Project Link
+https://github.com/ujjtamas/gitStat
+
+## Future Work
+
+
+
+## Resources
+the internet.
+
+
+## Team GITStat
+ - Tamás Ujj
+ - Niels M. Kristensen
+
+
+
+
+
+
+
+
+
+
+### Old stuff
+#Notes to discuss
+Add anything here so that we don!t forget and can discuss
+
+
+
+
+Others can access your selected repos and stats.
+
+Only work public repositories
 
 ## Modules
 Security for user management (Log in, log out)
 Manage/share content (profile)
 API
 Provide/Share content
+
+## Features
+Register in database
+log in
+add your git username
+List all repos
+and select which repo to add to app 
+and select features/stats to display
 
 ## Database
 User data
