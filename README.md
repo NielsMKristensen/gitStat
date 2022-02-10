@@ -1,3 +1,57 @@
+# Project GIT Statistics
+
+GIT Stat project #2 Full-stack Web Application. 
+
+An application to share and access ironhack student's git repositories.
+
+## Main User tory
+
+As a ironhacker student 
+I want to be able to share with and follow my fellow ironhacker students' git repositories and statistics
+So that I can compare code, get inspiration.
+
+### smaller user stories
+
+As a user of the Git Stat application
+I want to be able to choose what i share with the other students.
+To ensure the quality of my work.
+
+
+As a user of the Git Stat application
+I want my personal information to be protected from non git stat users.
+To prevent information theft.
+
+
+
+
+
+
+
+
+
+
+
+Wireframes
+User Stories
+Setup(Optional)
+Technologies Used
+Models
+Server routes table(Method, Route or URL, Description as columns)
+Demo(Optional) (Screenshots or GIFs of the application)
+Project Link
+Future Work
+Resources
+
+
+Team GITStat
+
+
+
+
+
+
+
+### Old stuff
 #Notes to discuss
 Add anything here so that we don!t forget and can discuss
 
@@ -66,7 +120,7 @@ Link to Git pages if there is any
 Students
 Ironhacker student learning full stack web development.
 
-As a ironhacker student I want to be able to share with and follow my fellow ironhacker students' git repositories and statistics so that I can compare code, get inspiration.
+
 
 ## Available statistics
 Link to Git documentation: https://docs.github.com/en/rest/reference/metrics#get-the-weekly-commit-count
