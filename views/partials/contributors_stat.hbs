@@ -1,0 +1,10 @@
+<h3>Contributors</h3>
+    <div class="statDetailContainer">
+        {{#each this}}
+            <div>
+            {{this.author.login}} made {{this.total}} commits.
+            Follow {{this.author.login}} <a href="{{this.author.html_url}}">here</a>
+            </div>
+            {{!-- {{this.total}} --}}
+        {{/each}}
+    </div>
