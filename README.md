@@ -2,7 +2,7 @@
 
 ## GIT Stat project #2 Full-stack Web Application. 
 
-An application to register and fetch statistics about student Git repositories
+An application to register and fetch information from own and other students git repositories in order to get inspiration and statistics.
 
 ## Main User tory
 
