@@ -4,9 +4,9 @@
 4 Clones and referrals*/
 const codePathMap = {
 0:'',
-1:['/stats/participation'],
-2:[''],
-4:['']
+1:['/stats/participation','/stats/code_frequency','/stats/punch_card','/stats/commit_activity'],
+2:['/stats/contributors'],
+4:['/stats/community/profile']
 };
 
 /* working up on til this stage
