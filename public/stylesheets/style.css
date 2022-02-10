@@ -35,3 +35,44 @@ h1 {
   grid-area: four;
 }
 
+.loginform {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginform button {
+  width: 6em;
+  height: 2em;
+  margin: auto;
+}
+
+.loginform label {
+  width: 6em;
+  height: 2em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.loginform a {
+  width: 6em;
+  height: 2em;
+  margin: auto;
+
+}
+
+.loginform p {
+  color: red;
+  width: 15em;
+  height: 2em;
+  margin: auto;
+  padding: auto;
+}
+
+
