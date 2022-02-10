@@ -142,3 +142,5 @@ Referral sources
     /repos/{owner}/{repo}/traffic/popular/referrers
 
   https://api.github.com/repos/ujjtamas/gitStat/stats/code_frequency
+
+  MONGODB_URI='mongodb://localhost:27017/gitstat'
