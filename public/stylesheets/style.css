@@ -88,3 +88,16 @@ h1 {
   width: 600px !important;
   height: 400px !important;
 }
+
+.header-color {
+  background-color: rgb(64, 71, 66);
+  color: #0a82b1;
+
+}
+
+.card-top-color {
+  background-color: rgb(92, 170, 115);
+}
+.card-bottom-color {
+  background-color: rgb(21, 168, 65);
+}

@@ -1,18 +1,18 @@
    <body>
-     <div>
-          <h1>HOME</h1>
-    </div>
+     
     <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap align-items-center py-3 mb-4 border-bottom header-color">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
       </a>
-         
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/profile" class="nav-link px-2 link-secondary">Profile</a></li>
-        <li><a href="/faq" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a href="/about" class="nav-link px-2 link-dark">About</a></li>
-      </ul>
+      
+      
+      <a class="btn btn-outline-primary me-2" href="/profile" class="nav-link px-2 link-secondary">Profile</a>
+      
+
+      <div class="col-md-3 text-end">
+          <h1>HOME</h1>
+    </div> 
 
       <div class="col-md-3 text-end">
             <form id="logout-form" action="/logout" method="POST">
@@ -21,9 +21,13 @@
       </div>
     </header> 
     </div>
-  {{#each data}}
-    {{> repoTile this}} 
-  {{/each}}
+    <div class="container">
+      <div class="row">
+      {{#each data}}
+        {{> repoTile this}} 
+      {{/each}}
+      </div>
+    </div>
         
     <script src="/js/script.js"></script>
    </body>
