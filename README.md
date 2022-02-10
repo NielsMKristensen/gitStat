@@ -62,7 +62,7 @@ Insert pictures here
 
 ## Models
 
-## GIT information
+### GIT model information
 const {Schema, model, SchemaTypes} = require('mongoose');
 
 const gitSchema = new Schema({
@@ -82,7 +82,7 @@ const Git = model("Git", gitSchema);
 
 module.exports = Git;
 
-### User information
+### User model information
 const { Schema, model } = require("mongoose");
 
 
@@ -109,6 +109,17 @@ const User = model("User", userSchema);
 module.exports = User;
 
 ## Server routes
+
+| Method  |Route    |
+|:-------:|:-------:|
+|
+|
+|
+|
+|
+|
+|
+|
 
 Server routes table(Method, Route or URL, Description as columns)
 
