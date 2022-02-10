@@ -110,9 +110,9 @@ module.exports = User;
 
 ## Server routes
 
-|Method|Route|Description|
-|:-------------:|:---------------:|:-----------:|:--------------:|
-|POST|/logon|logs the user in.|
+| Method | Route | Description |
+|:-------------:|:---------------:|:-----------:|
+| POST | /logon | logs the user in. |
 
 
 Server routes table(Method, Route or URL, Description as columns)
