@@ -2,6 +2,15 @@
 <h1>STATISTICS for repository name</h1>
 <a href="/home" class="nav-link px-2 link-dark">home</a>
 
-    {{#each data}} 
-        {{> statisticsPage this}} 
-    {{/each}}    
+    <div>
+        {{#each data.contributors}} 
+            {{> statisticsPage this}}
+        {{/each}}
+    </div>
+
+    {{!-- <div>
+        {{#each data.code_frequency}}
+            {{> code_freq_stat this}}
+        {{/each}}
+    </div> --}}
+    {{!-- {{> statisticsPage this.total}} --}}
