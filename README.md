@@ -16,6 +16,23 @@ Others can access your selected repos and stats.
 
 Only work public repositories
 
+## Technologies
+
+•	Node.js
+•	Express.js
+•	MongoDB
+•	Mongoose
+•	ES6
+•	Heroku
+•	Axios
+•	GIT API
+•	CSS
+•	HTML
+•	HBS
+•	ironLauncher
+
+
+
 ## Modules
 Security for user management (Log in, log out)
 Manage/share content (profile)
