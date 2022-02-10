@@ -112,7 +112,20 @@ module.exports = User;
 
 | Method | Route | Description |
 |:-------------:|:---------------:|:-----------:|
-| POST | /logon | logs the user in. |
+| / | GET | renders the homepage. |
+| /logon | GET | renders the login page. |
+| /logon | POST | logs the user in. and redirects to homepage. |
+| /logout | POST | logs the user out. |
+| /register | GET | renders the registration page. |
+| /register | POST | save the username encrypted password and git username in the database. |
+| /unregister | POST | deletes all user data and redirects to login page. |
+| /changegitusername | POST | changes the git username based on input. |
+| /statistics/:gitusername/:gitrepo | GET | fetches GIT information and render it on statistics page |
+| /profile | GET | renders the profile page + add data for management . |
+| /profile | POST | saves the data which is managed in the database |
+| /home | GET | renders the home page. |
+| /home | post | ????? |
+
 
 
 Server routes table(Method, Route or URL, Description as columns)
