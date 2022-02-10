@@ -48,7 +48,7 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
         }
         let e = {data: obj};
         console.log(e)
-        console.log(e.data.contributors);
+        console.log(e.data.code_frequency);
         res.render('statistics', {data: obj});
     }
     

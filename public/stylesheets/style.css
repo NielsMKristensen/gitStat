@@ -75,4 +75,10 @@ h1 {
   padding: auto;
 }
 
+.statContainer{
+  display: grid;
+}
 
+.statDetailContainer{
+  
+}
