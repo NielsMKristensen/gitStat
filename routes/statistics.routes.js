@@ -16,12 +16,13 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
     let gitrepo = req.params.gitrepo;
     
     
-    something();
+    something()
     async function something(){
         let gitRepoData = await getGitConfig();
         let arr = gitRepoData.linkToStats
         console.log(gitRepoData);
         let j = 1;
+        let obj = {}
         for(i in arr){
             // Build the tiles from the data
             let data = await getData(arr[i]);
@@ -31,18 +32,21 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
             
             if(arr[i].indexOf('code_frequency') > -1){
                 console.log('-----------------------------------');
-                res.render('statistics',{data: data});
+                obj.code_frequency = data;
+                //res.render('statistics',{data: data});
             }
 
-           /*  if(arr[i].indexOf('contributors') > -1){
-                res.render('statistics',{data: data});
-            } */
+             if(arr[i].indexOf('contributors') > -1){
+                //res.render('statistics',{data: data});
+                obj.contributors = data;
+            } 
 
             /* arr[i] = one type fot he data then we call something
             call something and there we check the type */
-            console.log(arr[i]);
-            j++;
+            
+            
         }
+        res.render('statistics', {data: obj});
     }
     
     //populate charts from data
@@ -66,8 +70,8 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
             });
             return p;
         }
-
-    res.render('statistics');
+       // console.log ('object here', test);
+    //res.render('statistics', {data: obj});
 });
 
 module.exports = router;
