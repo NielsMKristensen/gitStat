@@ -1,10 +1,6 @@
 <mxfile host="65bd71144e" pages="6">
     <diagram name="Login page" id="DgpQU_5o6dQfhRjZDWB3">
-<<<<<<< HEAD
         <mxGraphModel dx="851" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
-=======
-        <mxGraphModel dx="1222" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
->>>>>>> ec1a77ce7fcc9670de27b46cce9bfa31b4060199
             <root>
                 <mxCell id="qD_JSSgiLe47YjnPIYBm-0"/>
                 <mxCell id="qD_JSSgiLe47YjnPIYBm-1" parent="qD_JSSgiLe47YjnPIYBm-0"/>
@@ -21,11 +17,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Home page" id="03018318-947c-dd8e-b7a3-06fadd420f32">
-<<<<<<< HEAD
         <mxGraphModel dx="851" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
-=======
-        <mxGraphModel dx="1222" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
->>>>>>> ec1a77ce7fcc9670de27b46cce9bfa31b4060199
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -75,7 +67,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Statistics for selected Repo" id="hL8HClCgPLRcQbwxEeYj">
-        <mxGraphModel dx="543" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="712" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="_f9O5eJKwNrx-BWGJlD9-0"/>
                 <mxCell id="_f9O5eJKwNrx-BWGJlD9-1" parent="_f9O5eJKwNrx-BWGJlD9-0"/>
@@ -122,11 +114,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Manage my repos" id="3w_mdMQx02ED5VIUz_LC">
-<<<<<<< HEAD
         <mxGraphModel dx="851" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
-=======
-        <mxGraphModel dx="543" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
->>>>>>> ec1a77ce7fcc9670de27b46cce9bfa31b4060199
             <root>
                 <mxCell id="RC_PH-SbwwCIaF8CPwy_-0"/>
                 <mxCell id="RC_PH-SbwwCIaF8CPwy_-1" parent="RC_PH-SbwwCIaF8CPwy_-0"/>
@@ -190,8 +178,8 @@
             </root>
         </mxGraphModel>
     </diagram>
-    <diagram name="subscribe to repositories" id="rRNfReiLhtvTz0ZLuDOQ">
-        <mxGraphModel dx="543" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <diagram name="Find repositories" id="rRNfReiLhtvTz0ZLuDOQ">
+        <mxGraphModel dx="712" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="c34JWjqUfNY16Dk8h-Ym-0"/>
                 <mxCell id="c34JWjqUfNY16Dk8h-Ym-1" parent="c34JWjqUfNY16Dk8h-Ym-0"/>
@@ -244,7 +232,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Profile" id="nibG1DXTSC3XmuLgrH3y">
-        <mxGraphModel dx="543" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="712" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="U1lxxBbTftSfIKPYFbHb-0"/>
                 <mxCell id="U1lxxBbTftSfIKPYFbHb-1" parent="U1lxxBbTftSfIKPYFbHb-0"/>
