@@ -144,3 +144,4 @@ Referral sources
   https://api.github.com/repos/ujjtamas/gitStat/stats/code_frequency
 
   MONGODB_URI='mongodb://localhost:27017/gitstat'
+  MONGODB_URI='mongodb+srv://dbUser:w9bDjB6MBfsJKZEM@cluster0.j2roq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
