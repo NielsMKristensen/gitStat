@@ -1,39 +1,54 @@
     <h3>Participation</h3>
     <div class="statDetailContainer">
         <div>
-            Owner made commits pr week. {{this.owner}}
-            all commits pr week. {{this.all}}
-            <div>
-                <canvas id="participationCanvas"></canvas>
-            </div>
+            <canvas id="participationCanvas"></canvas>
         </div>
     </div>
 
 <script>
-  //<<!-- let stringData = '{{this.owner}}';
-  let stringData = '2,3,4,5,6,7,8,7,6,5,6,7,8,9,8,3,4,3,4,5';
+    let stringDataOwner = '{{this.owner}}'
+    let stringDataAll = '{{this.all}}'
 
-   data = stringData.split(',');
-   
+    let dataOwner = stringDataOwner.split(',');
+    let dataAll = stringDataAll.split(',');
+
+    let currentdate = new Date();
+
+    let oneJan = new Date(currentdate.getFullYear(),0,1);
+    let numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+    let weekNo = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+
     const labels = [];
-    for (i = 1; i<21; i++){
-        labels[i] = i;
+    let j = weekNo+1;
+    for (let i = 0; i<52-weekNo; i++){
+        labels[i] = j;
+        j++;
     }
-     console.log(labels);
-     console.log(data);
+
+    j = 1;
+    for(let i=labels.length;i<53;i++){
+        labels[i] = j;
+        j++;
+    }
+
     const ctx = document.getElementById('participationCanvas').getContext('2d');
     const chart = new Chart(ctx, {
-      type: 'line',
-      data: {
+        type: 'line',
+        data: {
         labels: labels,
         datasets: [
-          {
-            label: 'Participation',
+            {
+            label: 'Owner',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: data
-          }
+            data: dataOwner
+            },{
+            label: 'All',
+            backgroundColor: 'rgb(99, 255, 132)',
+            borderColor: 'rgb(99, 255, 132)',
+            data: dataAll
+            }
         ]
-      }
+        }
     }); // closes chart = new Chart()
 </script>
