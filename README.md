@@ -46,18 +46,18 @@ so that i can share with confidence.
 Insert pictures here
 
 ## Technologies
-•	Node.js
-•	Express.js
-•	MongoDB
-•	Mongoose
-•	ES6
-•	Heroku
-•	Axios
-•	GIT API
-•	CSS
-•	HTML
-•	HBS
-•	ironLauncher
+-	Node.js
+-	Express.js
+-	MongoDB
+-	Mongoose
+-	ES6
+-	Heroku
+-	Axios
+-	GIT API
+-	CSS
+-	HTML
+-	HBS
+-	ironLauncher
 
 
 ## Models
