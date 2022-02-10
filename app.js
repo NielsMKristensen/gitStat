@@ -13,7 +13,6 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
-
 const app = express();
 // const path = require('path');
 
@@ -48,6 +47,10 @@ app.use("/", register);
 //my repos
 const myRepos = require("./routes/update.repos.routes");
 app.use("/",myRepos);
+
+// Statistics
+const statistics = require("./routes/statistics.routes");
+app.use("/", statistics);
 
 //Main route
 const home = require("./routes/home.routes");

@@ -20,10 +20,4 @@ const getCode = (obj) => {
     return mappedRepos;
 }
 
-
-
-/* commitStat
-pageViews
-clonesReferrals */
-
 module.exports = getCode;

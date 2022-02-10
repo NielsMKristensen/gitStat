@@ -35,14 +35,14 @@ return decodeCode(x,arr2);
 
   //const getLinkToRepos = (username) => {
   //construct the full link username REPOname needed
-const getFullPath = (x,gitUserName) =>{
+const getFullPath = (x,gitUserName,repoName) =>{
   
   let pathArray = getPath(x);
   let fullPathArray = [];
   if(pathArray.length ==0) return 'No path to return';
 
   for(i in pathArray){
-    fullPathArray.push(baseURL + '/' + gitUserName  + pathArray[i]);
+    fullPathArray.push(baseURL + '/' + gitUserName  + '/' + repoName + pathArray[i]);
   }
   return(fullPathArray);
 }

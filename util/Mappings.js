@@ -4,15 +4,21 @@
 4 Clones and referrals*/
 const codePathMap = {
 0:'',
-1:['/stats/code_frequency','/stats/participation','/stats/punch_card'],
-2:['/traffic/views'],
-4:['/traffic/clones','/traffic/popular/paths','/traffic/popular/referrers']
+1:['/stats/code_frequency','/stats/participation','/stats/punch_card','/stats/commit_activity'],
+2:['/stats/contributors'],
+4:['/stats/community/profile']
 };
 
-const formCodes = {
+/* const formCodes = {
     'commitStat' : 1,
     'pageViews' : 2,
     'clonesReferrals' : 4
+}; */
+
+const formCodes = {
+    'commitStat' : 1,
+    'contributors' : 2,
+    'health' : 4
 };
 
 const gitAPIPathRepos = 'https://api.github.com/repos';

@@ -17,10 +17,10 @@ router.get('/home', isLoggedIn, (req,res,next) => {
     const gitusernames = req.session.currentUser.gitusernames;
     const userId = req.session.currentUser._id;
 
-    something();
-    async function something(){
+    gitData();
+    async function gitData(){
         let data = await getGit();
-        console.log(data);
+        console.log(data)
         res.render('home.hbs',{data: data});
     }
 

@@ -20,7 +20,7 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
     let gitDetailsArray = [];
 
     let repoWithCode = getRepoWithCode(req.body);
-    console.log(repoWithCode);
+    ;
     updateGit();
     
     async function updateGit(){
@@ -42,9 +42,10 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
                     if(data[i].name == j){
                         let gitDetailsObj = {};
                         gitDetailsObj.title = j;
+                        gitDetailsObj.gitusername = gitusernames[0];
                         gitDetailsObj.description = data[i].description
                         gitDetailsObj.linkToRepo = data[i].html_url;
-                        gitDetailsObj.linkToStats = [...getFullPath(repoWithCode[j],gitusernames)];
+                        gitDetailsObj.linkToStats = [...getFullPath(repoWithCode[j],gitusernames,data[i].name)];
                         gitDetailsArray.push(gitDetailsObj);
                     }
                 }
@@ -56,23 +57,4 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
     res.redirect('/home');
 })
 
-
 module.exports = router;
-
-/* [{
-only for configured ones
-    title : 'gitstat'
-    description : 'dfdfdffd'
-    linkto Git repository : 'link'
-    link to stat: [https,]
-    }
-  {
-
-    title : 'day1'
-    description : 'dfdfdffd'
-    linkto Git repository : 'link'
-    link to stat: [https,]
-    }
-    
-}]
-*/
