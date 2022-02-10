@@ -111,7 +111,7 @@ module.exports = User;
 ## Server routes
 
 |Method|Route|Description|
-|:---:|:---:|:---:|:---:|
+|:-------------:|:---------------:|:-----------:|:--------------:|
 |POST|/logon|logs the user in.|
 
 
