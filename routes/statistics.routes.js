@@ -5,6 +5,7 @@ const saltRounds = 10;
 const User = require('../models/User.models');
 const Git = require('../models/Git.models');
 const getData = require('../util/getDataFromAPI');
+const printChart = require('../util/printChart');
 
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 const { findOneAndUpdate } = require("../models/User.models");
