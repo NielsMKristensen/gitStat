@@ -5,7 +5,6 @@ const saltRounds = 10;
 const User = require('../models/User.models');
 const Git = require('../models/Git.models');
 const getData = require('../util/getDataFromAPI');
-const printChart = require('../util/printChart');
 
 const { isLoggedIn, isLoggedOut } = require('../middlewares/middleware');
 const { findOneAndUpdate } = require("../models/User.models");
@@ -32,29 +31,20 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
             }
             
             if(arr[i].indexOf('code_frequency') > -1){
-                console.log('-----------------------------------');
                 obj.code_frequency = data;
-                //res.render('statistics',{data: data});
             }
 
              if(arr[i].indexOf('contributors') > -1){
-                //res.render('statistics',{data: data});
                 obj.contributors = data;
             } 
 
             if(arr[i].indexOf('participation') > -1){
-                //res.render('statistics',{data: data});
                 obj.participation = data;
             } 
-
-            /* arr[i] = one type fot he data then we call something
-            call something and there we check the type */
-            
-            
         }
-        let e = {data: obj};
+        /* let e = {data: obj};
         console.log(e)
-        console.log(e.data.participation);
+        console.log(e.data.participation); */
         res.render('statistics', {data: obj});
     }
     

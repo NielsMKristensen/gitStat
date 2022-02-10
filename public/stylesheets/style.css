@@ -80,5 +80,11 @@ h1 {
 }
 
 .statDetailContainer{
-  
+
+}
+
+#participationCanvas{
+  border: solid 1px red;
+  width: 600px !important;
+  height: 400px !important;
 }

@@ -2,21 +2,21 @@
 1 Commit statistics
 2 Page views
 4 Clones and referrals*/
-const codePathMap = {
+/* const codePathMap = {
 0:'',
 1:['/stats/participation','/stats/code_frequency','/stats/punch_card','/stats/commit_activity'],
 2:['/stats/contributors'],
 4:['/stats/community/profile']
-};
+}; */
 
-/* working up on til this stage
+
 const codePathMap = {
 0:'',
-1:['/stats/code_frequency'],
+1:['/stats/code_frequency','/stats/participation'],
 2:['/stats/contributors'],
 4:['/stats/community/profile']
 };
-*/
+
 
 
 

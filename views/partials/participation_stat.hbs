@@ -1,9 +1,39 @@
     <h3>Participation</h3>
     <div class="statDetailContainer">
-        Owner made commits pr week. {{this.owner}}
-        all commits pr week.  {{this.all}} 
+        <div>
+            Owner made commits pr week. {{this.owner}}
+            all commits pr week. {{this.all}}
+            <div>
+                <canvas id="participationCanvas"></canvas>
+            </div>
+        </div>
     </div>
-            
-        
 
-         
+<script>
+  //<<!-- let stringData = '{{this.owner}}';
+  let stringData = '2,3,4,5,6,7,8,7,6,5,6,7,8,9,8,3,4,3,4,5';
+
+   data = stringData.split(',');
+   
+    const labels = [];
+    for (i = 1; i<21; i++){
+        labels[i] = i;
+    }
+     console.log(labels);
+     console.log(data);
+    const ctx = document.getElementById('participationCanvas').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Participation',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: data
+          }
+        ]
+      }
+    }); // closes chart = new Chart()
+</script>

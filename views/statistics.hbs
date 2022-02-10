@@ -3,19 +3,13 @@
 <a href="/home" class="nav-link px-2 link-dark">home</a>
 <div class="statContainer">
     <div>
-        
-            {{> contributors_stat data.contributors}}
-        
+        {{> contributors_stat data.contributors}}
     </div>
-
-
+    <div>
         {{> participation_stat data.participation}}
-
-
-   <div>
-        
-            {{> code_freq_stat data.code_frequency}}
-        
+    </div>
+    <div>
+        {{> code_freq_stat data.code_frequency}}
     </div>
     {{!-- {{> statisticsPage this.total}} --}}
 </div>
