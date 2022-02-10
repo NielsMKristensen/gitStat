@@ -44,54 +44,46 @@
     <h3>manage repositories</h3>
 
     <div>
-        <form action="/profile" method="POST" id="repoListForm">
+        <form action="/profile" method="POST" id="repoListForm" class="repoList">
+            <label>Repository Name</label>
+            <label for="checkAll_commitStat">Check all
+                <input type="checkbox" name="checkAll_commitStat" id="checkAll_commitStat" class="repoCheckbox" onClick="selectAll('commitStat','type')" />
+            </label>
+            <label for="checkAll_contributorStat">Check all
+                <input type="checkbox" name="checkAll_contributorStat" id="checkAll_contributorStat" class="repoCheckbox" onClick="selectAll('contributorStat','type')" />
+            </label>
+            <label for="checkAll_healthStat">Check all
+                <input type="checkbox" name="checkAll_healthStat" id="checkAll_healthStat" class="repoCheckbox" onClick="selectAll('healthStat','type')" />
+            </label>
             {{#each data}}
-                <div class="repoList">
-                    <label id="repoName">{{this.name}}</label>
+                {{!-- <div class="repoList"> --}}
+                    <label id="repoName" onClick="selectAll('{{this.name}}','repo')">{{this.name}}</label>
                     <label for="commitStat_{{this.name}}">Commit statistics
-                        
-                        <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" class="repoCheckbox" 
+                        <input type="checkbox" name="commitStat_{{this.name}}" id="commitStat_{{this.name}}" class="repoCheckbox commitStat" 
                         {{#if this.commitStat_}}
                             {{this.commitStat_}}
                         {{/if}} />
                     </label>
                 
                     <label for="contributors_{{this.name}}">Contributors
-                        <input type="checkbox" name="contributors_{{this.name}}" id="contributors_{{this.name}}" class="repoCheckbox" 
+                        <input type="checkbox" name="contributors_{{this.name}}" id="contributors_{{this.name}}" class="repoCheckbox contributorStat" 
                         {{#if this.contributors_}}
                             {{this.contributors_}}
                         {{/if}} />
                     </label>
                 
                     <label for="health_{{this.name}}">Health
-                        <input type="checkbox" name="health_{{this.name}}" id="health_{{this.name}}" class="repoCheckbox" 
+                        <input type="checkbox" name="health_{{this.name}}" id="health_{{this.name}}" class="repoCheckbox healthStat" 
                         {{#if this.health_}}
                             {{this.health_}}
                         {{/if}} />
                     </label>
-                    <span></span>
-                </div>
+                {{!-- </div> --}}
             {{/each}}
-                <button type="submit" value="submit" class="btn btn-outline-primary me-2">Submit</button>
+                <button type="submit" value="submit" class="btn btn-outline-primary me-2" id="submitRepos">Submit</button>
         </form>
     </div>
 
     <script src="/js/script.js"></script>
-    <script src="/js/fillRepoConfig.js"></script>
+    <script src="/js/checkAllOptions.js"></script>
    </body>
-
-
-    <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg> -->
-
-
-
-
-
-
-
-
-
-
-
-
-

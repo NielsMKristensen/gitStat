@@ -34,6 +34,15 @@ h1 {
 .repoList:nth-child(4){
   grid-area: four;
 }
+/*.repoList:nth-child(5){
+  grid-area: four;
+}
+.repoList:nth-child(6){
+  grid-area: three;
+}
+.repoList:nth-child(7){
+  grid-area: four;
+} */
 
 .loginform {
   width: auto;
