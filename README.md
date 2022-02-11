@@ -77,6 +77,13 @@ const gitSchema = new Schema({
         type:Object
     }],
 });
+    {
+        title: <Name of repository>,
+        gitusername: <Git username>,
+        description: <Description from Git>,
+        linkToRepo: <link to Git repository>
+        linkToStats: 
+    }
 
 const Git = model("Git", gitSchema);
 

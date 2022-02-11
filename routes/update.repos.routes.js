@@ -20,7 +20,7 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
     let gitDetailsArray = [];
 
     let repoWithCode = getRepoWithCode(req.body);
-    ;
+    
     updateGit();
     
     async function updateGit(){
@@ -54,7 +54,7 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
             });
             return p;
         }
-    res.redirect('/home');
+    res.render('/home');
 })
 
 module.exports = router;
