@@ -143,20 +143,18 @@ module.exports = User;
 
 
 
-
-
-
-
 ## Project Link
 https://github.com/ujjtamas/gitStat
 
 ## Future Work
-
-
+Display repositories from others who configured repositories
+Add more graphs
+Handle multiple usernames for the same user
 
 ## Resources
-the internet.
-
+GraphJS
+Git Documentation
+Bootstrap
 
 ## Team GITStat
  - Tamás Ujj
