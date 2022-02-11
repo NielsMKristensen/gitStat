@@ -90,7 +90,6 @@ router.post('/unregister', (req,res,next) => {
 router.post('/changegitusername', (req,res,next) => {
   const user = req.session.currentUser;
   const addNew = req.body.newgitusername
-  console.log('user', req.body)
 
   User.findByIdAndUpdate(user._id)
   .then(newUserToUpdate => {
@@ -101,6 +100,7 @@ router.post('/changegitusername', (req,res,next) => {
 
   })
   .catch((err) => next(err));
+  res.render('home');
 });
 
 

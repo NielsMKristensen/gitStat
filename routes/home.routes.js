@@ -74,16 +74,15 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
                             }
                         }
                     }
-            console.log(data);
             return data;
             });
-            console.log(data);
-            return data;
-            // res.render('profile', {data: data});
+        return data;
+        // res.render('profile', {data: data});
     });
         return p
     }
-   }
+   
+    }
 });
 
 router.post('/home',isLoggedIn, (req,res,next) => {
