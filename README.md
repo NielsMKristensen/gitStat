@@ -138,11 +138,6 @@ module.exports = User;
 | /profile | POST | saves the data which is managed in the database |
 | /home | GET | renders the home page. |
 
-
-
-
-
-
 ## Project Link
 https://github.com/ujjtamas/gitStat
 
@@ -157,78 +152,13 @@ Add password change field
 GraphJS
 Git Documentation
 Bootstrap
+[Link to Git documentation](https://docs.github.com/en/rest/reference/metrics#get-the-weekly-commit-count)
 
 ## Team GITStat
  - Tamás Ujj
  - Niels M. Kristensen
 
-
-
-
-
-
-
-
-
-
-### Old stuff
-#Notes to discuss
-Add anything here so that we don!t forget and can discuss
-
-
-
-
-Others can access your selected repos and stats.
-
-Only work public repositories
-
-## Modules
-Security for user management (Log in, log out)
-Manage/share content (profile)
-API
-Provide/Share content
-
-## Features
-Register in database
-log in
-add your git username
-List all repos
-and select which repo to add to app 
-and select features/stats to display
-
-## Database
-User data
-Git repo
-
- ## API
-GET data from GIT API on the go
-
-## MVP:
-login
-register git repos
-select at least one features 
-fetch via API
-display at elast 1 features
-
-## Features:
-self guide boolean
-Look up repositories
-Statistics
-Plugin to Slack
-Business with Ironhack
-Add option for handling private repositories
-Link to Git pages if there is any
-
-## Personas
-Students
-Ironhacker student learning full stack web development.
-
-
-
 ## Available statistics
-Link to Git documentation: https://docs.github.com/en/rest/reference/metrics#get-the-weekly-commit-count
-
-base url: https://api.github.com/
 weekly commit activity
     /repos/{owner}/{repo}/stats/code_frequency
 weekly commit count
@@ -243,8 +173,3 @@ Referral paths
     /repos/{owner}/{repo}/traffic/clones
 Referral sources
     /repos/{owner}/{repo}/traffic/popular/referrers
-
-  https://api.github.com/repos/ujjtamas/gitStat/stats/code_frequency
-
-  MONGODB_URI='mongodb://localhost:27017/gitstat'
-  MONGODB_URI='mongodb+srv://dbUser:w9bDjB6MBfsJKZEM@cluster0.j2roq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
