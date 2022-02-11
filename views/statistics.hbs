@@ -1,6 +1,25 @@
+<div >
+    <header class="d-flex flex-wrap align-items-center py-4 mb-4 border-bottom header-color">
+        
+       
+        <div class="col-md-2 text-end">
+            <a class="btn btn-primary" href="/home" class="nav-link px-2 link-dark">Home</a>
+        </div>
+  
+      <div class="col-md-5 text-end">
+          <h3>STATISTICS for: {{data.repo}} </h3>
+         </div> 
+        
+       
 
-<h1>STATISTICS for {{data.repo}}</h1>
-<a href="/home" class="nav-link px-2 link-dark">home</a>
+      <div class="col-md-2 text-end">
+            <form id="logout-form" action="/logout" method="POST">
+                <button class="btn btn-primary">Logout</button>
+            </form>
+      </div>
+    </header> 
+    </div>
+
 <div class="statContainer">
     <div>
         {{> contributors_stat data.contributors}}
