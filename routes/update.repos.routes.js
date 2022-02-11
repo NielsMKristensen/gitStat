@@ -25,7 +25,7 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
     
     async function renderPage(){
         const r = await updateGit();
-        res.render('home');
+        res.redirect('home');
     }
 
     async function updateGit(){

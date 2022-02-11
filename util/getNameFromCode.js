@@ -29,6 +29,9 @@ const getName = (config) => {
 function decodeCode(x,arr){
     let number = 0;
     let arr2 = arguments[1] == undefined ? [] : [...arr];
+    if (x==null){
+        return ([])
+    }
     
     if(x===0) {
       return arr;
