@@ -89,8 +89,9 @@ const gitSchema = new Schema({
 
     config Object
     {
-        'name of repositor': number
+        'name of repository': number
     }
+
 const Git = model("Git", gitSchema);
 
 module.exports = Git;
@@ -103,7 +104,6 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-  
     },
     password: String,
     gitusernames: [{
