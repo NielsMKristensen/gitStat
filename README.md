@@ -137,7 +137,7 @@ module.exports = User;
 | /profile | GET | renders the profile page + add data for management . |
 | /profile | POST | saves the data which is managed in the database |
 | /home | GET | renders the home page. |
-| /home | post | ????? |
+
 
 
 
