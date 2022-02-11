@@ -1,37 +1,27 @@
    <body>
-    
-    
-    <div class="container">
+    <div >
     <header class="d-flex flex-wrap align-items-center py-4 mb-4 border-bottom header-color">
           
         <div class="col-md-3 text-end">
-            <a class="btn btn-outline-primary me-2" href="/home" class="nav-link px-2 link-dark">Home</a>
+            <a class="btn btn-primary" href="/home" class="nav-link px-2 link-dark">Home</a>
         </div>
-
-        
-         <div class="col-md-3 text-end">
+  
+        <div class="col-md-3 text-end">
           <h1>PROFILE</h1>
         </div> 
       
-        
       <div class="col-md-3 text-end">
             <form id="logout-form" action="/logout" method="POST">
-                <button class="btn btn-outline-primary me-2">Logout</button>
+                <button class="btn btn-primary">Logout</button>
             </form>
       </div>
-      
-      <div class="col-md-2 text-end">
-            <form id="logout-form" action="/unregister" method="POST">
-                <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-outline-primary me-2">Unregister</button>
-            </form>
-         </div>
-
     </header> 
     </div>
     
-    <p>change password</p>
+    
     
     <h3>Change GIT username</h3>
+    
     <form action="/changegitusername" method="POST">
 
         {{#each data}}
@@ -41,10 +31,19 @@
                 </label>
             {{/if}}
         {{/each}}
-    <button type="submit">Change</button>
+    <button class="btn btn-primary" type="submit">Change</button>
     </form>
-    
-    <h3>manage repositories</h3>
+    <br>
+    <h3>Unregister</h3>
+    <p>WARNING All will be lost and you need to start over WARNING</p>
+    <div>
+        <form id="logout-form" action="/unregister" method="POST">
+            <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-primary">Unregister</button>
+        </form>
+    </div>
+    <br>
+
+    <h3>Manage repositories</h3>
 
     <div>
         <form action="/profile" method="POST" id="repoListForm" class="repoList">
@@ -83,7 +82,8 @@
                     </label>
                 {{!-- </div> --}}
             {{/each}}
-                <button type="submit" value="submit" class="btn btn-outline-primary me-2" id="submitRepos">Submit</button>
+            
+                <button type="submit" value="submit" class="btn btn-primary" id="submitRepos">Submit</button>
         </form>
     </div>
 
