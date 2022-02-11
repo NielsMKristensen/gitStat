@@ -150,6 +150,8 @@ https://github.com/ujjtamas/gitStat
 Display repositories from others who configured repositories
 Add more graphs
 Handle multiple usernames for the same user
+During registration add another password field to match typos
+Add password change field
 
 ## Resources
 GraphJS
