@@ -40,7 +40,16 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
     let availableConfig = {};
     let config = {};
     for (i in gitusernames){
-    getRepos(gitusernames[i])
+    
+    get();
+
+    async function get(){
+        const resp = await getReposFromDB();
+        res.render('profile', {data: data});
+    }
+
+    async function getReposFromDB(){
+    const p = getRepos(gitusernames[i])
         .then( data => {
             Git.findOne({username: userId})
                 .then((user) => {
@@ -66,8 +75,10 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
                         }
                     }
             });
-            res.render('profile', {data: data});
+            // res.render('profile', {data: data});
     });
+        return p
+    }
    }
    
 });
