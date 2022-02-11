@@ -45,23 +45,22 @@ h1 {
 } */
 
 .loginform {
-  width: auto;
-  height: auto;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .loginform button {
-  width: 6em;
-  height: 2em;
+  width: 10em;
+  height: 2.5em;
   margin: auto;
 }
 
 .loginform label {
-  width: 6em;
-  height: 2em;
+  width: 10em;
+  height: 2.5em;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -70,8 +69,8 @@ h1 {
 }
 
 .loginform a {
-  width: 6em;
-  height: 2em;
+  width: 10em;
+  height: 2.5em;
   margin: auto;
 
 }
