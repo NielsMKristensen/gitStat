@@ -20,7 +20,7 @@ router.get('/home', isLoggedIn, (req,res,next) => {
     gitData();
     async function gitData(){
         let data = await getGit();
-        console.log(data)
+        // console.log(data)
         res.render('home.hbs',{data: data});
     }
 
@@ -45,11 +45,11 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
 
     async function get(){
         const resp = await getReposFromDB();
-        res.render('profile', {data: data});
+        res.render('profile', {data: resp});
     }
 
     async function getReposFromDB(){
-    const p = getRepos(gitusernames[i])
+    const p = await getRepos(gitusernames[i])
         .then( data => {
             Git.findOne({username: userId})
                 .then((user) => {
@@ -70,17 +70,17 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
                                 for(x = 0; x<a.length;x++){
                                     data[i][a[x]] = 'checked'; 
                                 }
-                                
                             }
                         }
                     }
+            return data;        
             });
+            return data;
             // res.render('profile', {data: data});
     });
         return p
     }
    }
-   
 });
 
 router.post('/home',isLoggedIn, (req,res,next) => {
