@@ -8,20 +8,23 @@
             <a class="btn btn-outline-primary me-2" href="/home" class="nav-link px-2 link-dark">Home</a>
         </div>
 
-        <div class="col-md-2 text-end">
-            <form id="logout-form" action="/unregister" method="POST">
-                <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-outline-primary me-2">Unregister</button>
-            </form>
-         </div>
+        
          <div class="col-md-3 text-end">
           <h1>PROFILE</h1>
         </div> 
       
+        
       <div class="col-md-3 text-end">
             <form id="logout-form" action="/logout" method="POST">
                 <button class="btn btn-outline-primary me-2">Logout</button>
             </form>
       </div>
+      
+      <div class="col-md-2 text-end">
+            <form id="logout-form" action="/unregister" method="POST">
+                <button onclick="return confirm('WARNING you will need to register again and set up all you repositories WARNING');" class="btn btn-outline-primary me-2">Unregister</button>
+            </form>
+         </div>
 
     </header> 
     </div>

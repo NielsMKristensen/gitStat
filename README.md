@@ -36,7 +36,7 @@ so that i can share with confidence.
 
 ### other tasks
 - Styling
-- trouble shooting :-)
+- trouble shooting
 - deploy to hiroku
 - mongo cloud setup.
 # ADD MORE
@@ -141,7 +141,7 @@ module.exports = User;
 
 
 
-Server routes table(Method, Route or URL, Description as columns)
+
 
 ## Project Link
 https://github.com/ujjtamas/gitStat
