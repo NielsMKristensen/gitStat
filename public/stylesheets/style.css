@@ -93,15 +93,17 @@ h1 {
 }
 
 #participationCanvas{
-  border: solid 1px red;
-  width: 600px !important;
-  height: 400px !important;
+  border: solid 1px rgb(96, 99, 97);
+  width: 300px !important;
+  height: 200px !important;
+  border-radius: 0.5rem;
 }
 
 #code_freqCanvas{
-  border: solid 1px red;
-  width: 600px !important;
-  height: 400px !important;
+  border: solid 1px rgb(96, 99, 97);
+  width: 300px !important;
+  height: 200px !important;
+  border-radius: 0.5rem;
 }
 
 .header-color {
