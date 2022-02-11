@@ -77,14 +77,20 @@ const gitSchema = new Schema({
         type:Object
     }],
 });
+    
+    gitDetails Object
     {
         title: <Name of repository>,
         gitusername: <Git username>,
         description: <Description from Git>,
         linkToRepo: <link to Git repository>
-        linkToStats: 
+        linkToStats: <Array of links to Git repositories>
     }
 
+    config Object
+    {
+        'name of repositor': number
+    }
 const Git = model("Git", gitSchema);
 
 module.exports = Git;
@@ -100,7 +106,7 @@ const userSchema = new Schema(
   
     },
     password: String,
-  gitusernames: [{
+    gitusernames: [{
     type: String,
   }],
   

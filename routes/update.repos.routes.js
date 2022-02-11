@@ -21,8 +21,13 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
 
     let repoWithCode = getRepoWithCode(req.body);
     
-    updateGit();
+    renderPage();
     
+    async function renderPage(){
+        const r = await updateGit();
+        res.render('home');
+    }
+
     async function updateGit(){
         const arr = await getReposFunction();
         
@@ -54,7 +59,7 @@ router.post('/profile', isLoggedIn,(req,res,next) => {
             });
             return p;
         }
-    res.render('/home');
+    // res.render('/home');
 })
 
 module.exports = router;
