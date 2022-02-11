@@ -1,11 +1,62 @@
 <h3>Code Frequency</h3>
     <div class="statDetailContainer">
-        {{#each this}}
+        <canvas id="code_freqCanvas"></canvas>
+        {{!-- {{#each this}}
             <div>
                 On week {{this.[0]}} there has been {{this.[1]}} additions and {{this.[2]}} deletions.
-                <canvas id="my-chart"></canvas>
+                
             </div>
-        {{/each}}
+        {{/each}} --}}
     </div>
 
-    
+<script>
+    //let dataString = '{{this}}';
+    let dataString = '{{this}}';
+    let addArr = [];
+    let delArr = [];
+
+    let data = dataString.split(',');
+
+    labelsCodeFreq = [];
+    let k = 0;
+    for (let i = 0; i<data.length; i++){
+        if(i % 3 == 0){
+            labels[k] = data[i];
+            k++;
+        }
+    }
+
+    for(let i= 0;i<data.length;i++){
+        if(i % 3 == 0){
+            continue;
+        }
+        if(data[i] > 0 ){
+            addArr.push(data[i])
+        }
+        else{
+            delArr.push(data[i]*-1);
+        }
+    }
+
+    const ctx2 = document.getElementById('code_freqCanvas').getContext('2d');
+    const chart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+        labels: labelsCodeFreq,
+        datasets: [
+            {
+            label: 'Deletion',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: delArr
+            },
+            {
+            label: 'Addition',
+            backgroundColor: 'rgb(99, 255, 132)',
+            borderColor: 'rgb(99, 255, 132)',
+            data: addArr
+            }
+        ]
+        }
+    });
+    </script>

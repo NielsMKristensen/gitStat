@@ -15,14 +15,14 @@ router.get('/statistics/:gitusername/:gitrepo', (req,res,next) =>{
     let gitusername = req.params.gitusername;
     let gitrepo = req.params.gitrepo;
     
-    
-    something()
-    async function something(){
+    buildData()
+    async function buildData(){
         let gitRepoData = await getGitConfig();
         let arr = gitRepoData.linkToStats
-        console.log(gitRepoData);
+        console.log('E:' + gitRepoData);
         let j = 1;
         let obj = {}
+        obj.repo = gitrepo;
         for(i in arr){
             // Build the tiles from the data
             let data = await getData(arr[i]);

@@ -98,6 +98,12 @@ h1 {
   height: 400px !important;
 }
 
+#code_freqCanvas{
+  border: solid 1px red;
+  width: 600px !important;
+  height: 400px !important;
+}
+
 .header-color {
   background-color: rgb(64, 71, 66);
   color: #0a82b1;
