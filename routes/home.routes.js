@@ -45,6 +45,7 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
 
     async function get(){
         const resp = await getReposFromDB();
+        console.log(resp);
         res.render('profile', {data: resp});
     }
 
@@ -73,8 +74,10 @@ router.get('/profile', isLoggedIn, (req,res,next) => {
                             }
                         }
                     }
-            return data;        
+            console.log(data);
+            return data;
             });
+            console.log(data);
             return data;
             // res.render('profile', {data: data});
     });
